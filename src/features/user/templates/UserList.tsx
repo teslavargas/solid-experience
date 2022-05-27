@@ -11,6 +11,7 @@ import ButtonIcon from '../../../molecules/ButtonIcon';
 import ButtonScrollUp from '../../../molecules/ButtonScrollUp';
 import MediaObject from '../../../molecules/MediaObject';
 import FilterSort from '../../filterSort/organisms/FilterSort';
+import Filter from '../../filterSort/organisms/Filter';
 import useModal from '../../shared/hooks/useModal';
 import ConfirmDelete from '../../shared/modals/ConfirmDelete';
 import RemoveModalContent from '../../shared/modals/RemoveModalContent';
@@ -64,6 +65,7 @@ const UserList: Component<UserListTemplateProps> = ( props ) =>
                 </div>
             </section>
 
+            <Filter />
             <FilterSort searchPlaceholder={`${t( 'u_search', { count: 1 } )}...`} filterBy={filterBy} orderBy={orderBy}/>
 
             <Show when={props.loading} >
